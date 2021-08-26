@@ -24,13 +24,12 @@ For example:
 
 
 ## Requirements
-Fork and extend this project to answer the questions in part 1 & 2.
+Fork or download this project to answer the questions in part 1 & 2.
 The project consists of an express route in `api.js` and a react client in `client.js`.
 
-1. Fork the code to your own github account.
-2. Use `src/api.js` to build an api that can process drone instructions and return an answer.
-3. Use `src/client.js` to build a front end that can send instructions to the api and render the response.
-4. We will use sample-input.txt to validate your api.
+1. Use `src/api.js` to build an api that can process drone instructions and return an answer.
+2. Use `src/client.js` to build a front end that can send instructions to the api and render the response.
+3. We will use sample-input.txt to validate your api.
 
 * If you are a back-end developer we will mostly look at your work in `api.js`
 * If you are a front-end developer we will assess the UI built in `client.js`
