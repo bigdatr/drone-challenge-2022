@@ -8,7 +8,6 @@ const processInstructions = (droneInstructions, dronesCount) => {
     const firstDrone = new DroneInstruction();
     firstDrone.executeInstructions(dividedInstructions[0]);
     const firstDroneCoordinates = firstDrone.getCoordinates();
-    const firstDronePhotos = Object.keys(firstDroneCoordinates).length;
 
     const secondDrone = new DroneInstruction();
     secondDrone.setCoordinates(firstDroneCoordinates);
@@ -16,14 +15,9 @@ const processInstructions = (droneInstructions, dronesCount) => {
     const secondDroneCoordinates = secondDrone.getCoordinates();
     const secondDronePhotos = Object.keys(secondDroneCoordinates).length;
     return {
-      drones: {
-        0: {
-          photos: firstDronePhotos,
-        },
-        1: {
-          photos: secondDronePhotos,
-        },
-      },
+      photos: secondDronePhotos,
+      drones: dronesCount,
+      isTwo: true,
     };
   }
 
@@ -32,11 +26,8 @@ const processInstructions = (droneInstructions, dronesCount) => {
   const droneCoordinates = drone.getCoordinates();
   const dronePhotos = Object.keys(droneCoordinates).length;
   return {
-    drones: {
-      0: {
-        photos: dronePhotos,
-      },
-    },
+    photos: dronePhotos,
+    drones: dronesCount,
   };
 };
 
