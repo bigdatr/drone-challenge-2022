@@ -5,7 +5,9 @@
   "scripts": {
     "watch": "yarn watch-client & yarn watch-api",
     "watch-api": "node src/api.js",
-    "watch-client": "yarn poi src/client.js --serve"
+    "watch-api:nodemon": "nodemon src/api.js",
+    "watch-client": "yarn poi src/client.js --serve",
+    "watch:dev": "yarn watch-client & yarn watch-api:nodemon"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -15,6 +17,7 @@
     "react-fetch-hook": "^1.8.5"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "poi": "^12.10.3"
   }
 }
