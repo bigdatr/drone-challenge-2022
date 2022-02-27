@@ -5,9 +5,13 @@
   "scripts": {
     "watch": "yarn watch-client & yarn watch-api",
     "watch-api": "node src/api.js",
-    "watch-client": "yarn poi src/client.js --serve"
+    "watch-api:nodemon": "nodemon src/api.js",
+    "watch-client": "yarn poi src/client.js --serve",
+    "watch:dev": "yarn watch-client & yarn watch-api:nodemon"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "bulma": "^0.9.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "react": "^17.0.2",
@@ -15,6 +19,7 @@
     "react-fetch-hook": "^1.8.5"
   },
   "devDependencies": {
+    "nodemon": "^2.0.15",
     "poi": "^12.10.3"
   }
 }
